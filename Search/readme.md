@@ -24,3 +24,36 @@ Result(s,a) returns the state resulting from performing action a in state s
 **Path Cost:** Numerical cost associated with the given path.
 
 **Solution:** A sequence of actions that leads from the initial state to the goal state.
+
+**Optimal Solution:** Solution which has the lowest path cost of all the solutions.
+
+## Node
+
+A data structure that keeps track of
+* a state
+* a parent( a node that generated this node)
+* an action ( action applied to parent to get to this node)
+* a path cost( from initial state to node)
+
+## Approach
+
+We are going to look at the frontier(queue) and ask ourselves is this the goal if not remove it and expand the node. If it is we found the solution.
+
+### Revised Approach
+
+Start with a frontier(queue) that contains the initial state.
+Start with an empty explored set
+Repeat:
+  If the frontier is empty no solution
+  Remove a node from the frontier
+  If node contains goal state, return the solution
+  Add node to the explored set
+  Expand node and add resulting nodes to the frontier if they arent already in the frontier or the explored set.
+
+**Stack:** Last in first out data type
+
+## DEPTH-FIRST SEARCH
+Search algorithm that always expands the deepest node in the frontier
+
+## BREADTH-FIRST SEARCH
+Search algorithm that always expands the shallowest node in the frontier
