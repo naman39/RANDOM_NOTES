@@ -10,9 +10,11 @@
 **Initial State:** A state where agent begins
 
 **Actions:** Choices that can be made in a state
+
 Actions(s) returns the set of actions that can be executed in state s.
 
 **Transition model:** A description of what state results from performing any applicable action in any state. 
+
 Result(s,a) returns the state resulting from performing action a in state s
 
 **State Space:** the set of all states reachable from the initial state by any sequence of actions.
