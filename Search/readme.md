@@ -22,3 +22,5 @@ Result(s,a) returns the state resulting from performing action a in state s
 **Goal Test:** Some way to test if a given state is a goal state.
 
 **Path Cost:** Numerical cost associated with the given path.
+
+**Solution:** A sequence of actions that leads from the initial state to the goal state.
