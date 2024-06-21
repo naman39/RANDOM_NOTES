@@ -77,3 +77,10 @@ Search algorithm that expands the node that is closest to the goal, as estimated
 Search algorithm that expands node with the lowest value of g(n) + h(n).
 g(n) = cost to reach node
 h(n) = estimated cost to goal
+
+**A- Search is optimal if:**
+- h(n) is admissible (never overestimates the true cost), and
+- h(n) is consistent (for every node n and successor n' with step cost c, h(n) <= h(n') + c)
+
+
+## MINMAX 
