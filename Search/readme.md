@@ -84,3 +84,46 @@ h(n) = estimated cost to goal
 
 
 ## MINMAX 
+MAX(X) aims to maximize the score
+MIN(O) aims to minimize the score
+
+Given a state s:
+  * MAX picks action a in ACTIONS(s) that produces highest value of MIN-VALUE(RESULTS(s,a))
+  * MIN picks action a in ACTIONS(s) that produces smallest value of MAX-VALUE(RESULTS(s,a))
+
+```function MAX-VALUE(state):
+  if terminal(state):
+    return utility(state)
+  v = -infinity
+  for action in ACTIONS(state):
+    v = MAX(v, MIN-VALUE(RESULT(state, action)))
+  return v```
+
+```function MIN-VALUE(state):
+  if terminal(state):
+    return utility(state)
+  v = infinity
+  for action in ACTIONS(state):
+    v = MIN(v, MAX-VALUE(RESULT(state, action)))
+  return v```
+
+## GAME
+
+* So: Initial State
+* Player(s): returns which player to move in state(s)
+* Actions(s): returns legal moves in state s
+* Result(s,a): returns state after action a is taken
+* Terminal(s): checks if state s is a terminal state
+* Utility(s): final numerical value for terminal state s
+
+## OPTIMIZATIONS
+
+ALPHA-BETA PRUNING REMOVING UNNECSARY CALCULATIONS
+
+###DEPTH LIMITED MINIMAX
+
+ONLY CONSIDER TO THE NEXT FOUR MOVES
+
+###EVALUATION FUNCTION
+
+FUNCTION THAT ESTIMATES THE EXPECTED UTILITY OF THE GAME FROM A GIVEN STATE
