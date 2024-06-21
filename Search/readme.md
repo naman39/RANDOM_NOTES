@@ -49,11 +49,31 @@ Repeat:
   If node contains goal state, return the solution
   Add node to the explored set
   Expand node and add resulting nodes to the frontier if they arent already in the frontier or the explored set.
+  
+## UNINFORMED SEARCH
+
+Search strategy that uses no problem-specific knowledge
+
+### DEPTH-FIRST SEARCH
+Search algorithm that always expands the deepest node in the frontier
 
 **Stack:** Last in first out data type
 
-## DEPTH-FIRST SEARCH
-Search algorithm that always expands the deepest node in the frontier
-
-## BREADTH-FIRST SEARCH
+### BREADTH-FIRST SEARCH
 Search algorithm that always expands the shallowest node in the frontier
+
+**queue:** first in first out data type
+
+## INFORMED SEARCH
+
+Search strategy that uses problem-specific knowledge to find solutions more efficiently.
+
+### GREEDY BEST-FIRST SEARCH
+
+Search algorithm that expands the node that is closest to the goal, as estimated by a heuristic function h(n).
+
+### A* SEARCH 
+
+Search algorithm that expands node with the lowest value of g(n) + h(n).
+g(n) = cost to reach node
+h(n) = estimated cost to goal
