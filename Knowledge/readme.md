@@ -60,4 +60,4 @@ The process of deriving new sentences from old ones
 * To determine if Knowledge base entails Alpha
   *  Enumerate all possible models
   *  If in every model where knowledge base is True, Alpha is also true then Knowledge Base entails Alpha.
-  *  Otherwise Knowledge Base doesnot entails Alpha  
+  *  Otherwise Knowledge Base doesnot entails Alpha.
